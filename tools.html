@@ -9,7 +9,7 @@
         .tit{height:50px;line-height:50px;font-size:18px;text-align:center;color:#DE5347;}
         .box{width:1200px;height:auto;margin:0px auto 10px;background:#eee;border-radius:10px;padding:0px 10px 30px;}
         .box .item{border:1px solid #ccc;margin-top:10px;border-radius:10px;overflow:hidden;}
-        .box .item p{height:30px;line-height:30px;padding-left:30px;}
+        .box .item p{line-height:30px;padding-left:30px;}
         .box .item p.title{background:#ccc;}
         .box .item p.cont{background:#fff;text-indent:16px;}
     </style>
@@ -28,13 +28,15 @@
         </div>
         <div class="item">
             <p class="title">3. &&的用法技巧</p>
-            <p class="cont">例子：var cont=null&&1;结果：1;var cont1=23&&1;结果：1</p>
-            <p class="cont">&&连接两边，不管两边是什么值，都返回右边的值</p>
+            <p class="cont">例子：var cont=null&&1;结果：null;var cont1=23&&1;结果：1</p>
+            <p class="cont">找假，如果第一个数转换后的值为false，则直接返第一个数， 不管第二个数是真还是假；
+				如果第一个数转换后的值为true，则直接返回第二个值，不管第二值是真还是假。
+			</p>
         </div>
         <div class="item">
             <p class="title">4. ||的用法技巧</p>
             <p class="cont">例子：var cont=null||1;结果：1;var cont1=23||1;结果：23;var cont1=null||undefined;结果：undefined</p>
-            <p class="cont">||连接两边，如果两边都为假，返回右边的值。如果一真一假，返回真的值。如果两边都为真，返回左边的值。</p>
+            <p class="cont">找真，如果第一个值转换后为true,则直接返回，如果转换后，第一个值为false,则返回第二值。</p>
         </div>
         <div class="item">
             <p class="title">5.jq操作iframe（服务器环境下测试） </p>
@@ -69,16 +71,16 @@
 		    </p>
 			
         </div>
-		<div class="item">
+	<div class="item">
             <p class="title">10.创建一个本地仓库并与github远程同步</p>
             <p class="cont" style="height:auto;text-indent:0;">
-			1.打开github客户端，点击左上角加号，选择“creat”，依次填入'name',"local path"自己定义，即自己想要创建的
-				本地仓库的位置，点击"creat respositiory"。<br/>
-				2.在创建好的本地仓库里，开发自己的代码，保存后，github客户端的，“changes”会提示有更新，点击可以查看<br/>
-				3.输入简要，及详细描述，点击“commit to master”合并到分支。最后点击“sync”，就可以同步到github网站了。<br/>
+				1.打开github客户端，点击左上角加号，选择“creat”，依次填入'name',"local path"自己定义，即自己想要创建的
+				本地仓库的位置，点击"creat respositiory"。<br>
+				2.在创建好的本地仓库里，开发自己的代码，保存后，github客户端的，“changes”会提示有更新，点击可以查看<br>
+				3.输入简要，及详细描述，点击“commit to master”合并到分支。最后点击“sync”，就可以同步到github网站了。<br>
 				4.如果想利用github做网站，要开辟新的分支，gh-pages,之后可以使用“gitname.github.io/仓库name/***.html”访问了
-				
-		    </p>
+
+			</p>
 			
         </div>
     </div>
