@@ -1,0 +1,74 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <title>常用方法汇总</title>
+    <style>
+        *{margin:0;padding:0;font-family:'微软雅黑';font-size:14px;}
+        body{background:#eee;}
+        .tit{height:50px;line-height:50px;font-size:18px;text-align:center;color:#DE5347;}
+        .box{width:1200px;height:auto;margin:0px auto 10px;background:#eee;border-radius:10px;padding:0px 10px 30px;}
+        .box .item{border:1px solid #ccc;margin-top:10px;border-radius:10px;overflow:hidden;}
+        .box .item p{height:30px;line-height:30px;padding-left:30px;}
+        .box .item p.title{background:#ccc;}
+        .box .item p.cont{background:#fff;text-indent:16px;}
+    </style>
+</head>
+<body>
+    <div class="tit">web常用方法汇总</div>
+    <div class="box">
+        <div class="item">
+            <p class="title">1. 获取地址栏问号及后面的内容</p>
+            <p class="cont">var cont=window.location.search;</p>
+        </div>
+        <div class="item">
+            <p class="title">2. 获取地址栏问号前面的内容(不包括问号)不包含参数</p>
+            <p class="cont">var cont=window.location.pathname;</p>
+
+        </div>
+        <div class="item">
+            <p class="title">3. &&的用法技巧</p>
+            <p class="cont">例子：var cont=null&&1;结果：1;var cont1=23&&1;结果：1</p>
+            <p class="cont">&&连接两边，不管两边是什么值，都返回右边的值</p>
+        </div>
+        <div class="item">
+            <p class="title">4. ||的用法技巧</p>
+            <p class="cont">例子：var cont=null||1;结果：1;var cont1=23||1;结果：23;var cont1=null||undefined;结果：undefined</p>
+            <p class="cont">||连接两边，如果两边都为假，返回右边的值。如果一真一假，返回真的值。如果两边都为真，返回左边的值。</p>
+        </div>
+        <div class="item">
+            <p class="title">5.jq操作iframe（服务器环境下测试） </p>
+            <p class="cont">例子：子页面操作父页面元素</p>
+            <p class="cont">$(window.parent.document).find('body')....</p>
+            <p class="cont">例子：父页面操作子页面元素</p>
+            <p class="cont">$(window.frames["iframe1"].document).find("")...</p>
+        </div>
+        <div class="item">
+            <p class="title">6.低版本ie浏览器清除浮动(不添加标签) </p>
+            <p class="cont">给父页面加上&nbsp;&nbsp;overflow: hidden;_zoom:1;</p>
+
+        </div>
+        <div class="item">
+            <p class="title">7.操作数组的方法之splice</p>
+            <p class="cont">splice方法向数组中删除元素(2个参数时，有返回值，就是所删除的元素)或添加元素（3个参数），并且改变了原数组</p>
+            <p class="cont">例子splice：arr_1=arr.splice(2,2);  从2开始删除2个元素，改变了原数组arr,并把截到的值返回给新数组arr_1</p>
+			<p class="cont">例子splice：arr.splice(2,1,"William");  从2开始删除1个元素 ，再在此位置增加一个元素'william'  </p>
+        </div>
+        <div class="item">
+            <p class="title">8.操作数组的方法之slice</p>
+            <p class="cont">slice方法从已有的数组中返回选定的元素,不改变原数组</p>
+            <p class="cont">例子slice：arr_2=arr2.slice(2,5);//从2开始截到5(不含),并把截到的值返回给arr_2</p>
+			
+        </div>
+        <div class="item">
+            <p class="title">9.获取两个数之间的随机数</p>
+            <p class="cont">function ran(n,m){
+			        return Math.floor(Math.random()*(m-n)+n);
+
+			    }
+		    </p>
+			
+        </div>
+    </div>
+</body>
+</html>
